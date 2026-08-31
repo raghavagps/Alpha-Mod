@@ -155,7 +155,6 @@ minimize_status.json
 - Novel residues must contain one unambiguous alpha-amino-acid backbone. Atom identities that cannot be transferred safely from the parent receive deterministic element-based names such as `C1`, `C2`, `O1`, and `H1`.
 - For an internal novel residue, the stitcher removes only a hydrogen actually bonded to the amino nitrogen. Heavy N-substituents such as a methyl group are preserved. If no removable N-bound hydrogen exists, the stitcher fails instead of deleting a heavy atom.
 - Reaching `max_steps` is not equivalent to convergence. Inspect geometry, peptide-bond distances, energies, and displacement metrics before using such a structure.
-- The current whole-residue stitching strategy can place the source carbonyl oxygen poorly relative to the following peptide nitrogen for some modifications. This geometry issue remains under investigation; affected structures can minimize slowly or become chemically invalid. Pre-minimization peptide geometry should therefore be checked, especially for new residue chemistries.
 - AlphaFold2 and ET-Flow predictions, proton placement, and MACE optimization can produce small run-to-run differences. A peptide may converge in a different number of steps between otherwise equivalent runs.
 
 ## Advanced local setup
